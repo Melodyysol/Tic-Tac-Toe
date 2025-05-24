@@ -136,3 +136,10 @@
   .winning-message.show {
     display: flex;
   }
+
+  @media screen {
+    .cell{
+      width: calc(var(--cell-size) * 3);
+      height: calc(var(--cell-size) * 3);
+    }
+  }
