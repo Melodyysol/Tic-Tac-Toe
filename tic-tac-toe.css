@@ -137,9 +137,28 @@
     display: flex;
   }
 
-  @media screen {
+   @media screen {
     .cell{
       width: calc(var(--cell-size) * 3);
       height: calc(var(--cell-size) * 3);
+    }
+    .cell.x::after, .cell.x::before,
+    .board.x .cell:not(.x):not(.circle):hover::after,
+    .board.x .cell:not(.x):not(.circle):hover::before{
+      content: '';
+      width: calc(var(--mark-size) * 2.8);
+      height: calc(var(--mark-size) * .5);
+    }
+    
+    .cell.circle::after,
+    .board.circle .cell:not(.x):not(.circle):hover::after{
+      width: calc(var(--mark-size) * 1.7);
+      height: calc(var(--mark-size) * 1.7);
+      background-color: white;
+    }
+    .cell.circle::before,
+    .board.circle .cell:not(.x):not(.circle):hover::before{
+      width: calc(var(--mark-size) * 2.9);
+      height: calc(var(--mark-size) * 2.9);
     }
   }
